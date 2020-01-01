@@ -44,7 +44,7 @@ CFLAGS += -W -Wall -Wextra -O2 -std=gnu11
 
 all: $(BIN)
 
-$(BIN): $(SRCS) $(HDRS)
+$(BIN): $(SRCS) $(HDRS) $(HIDAPI)
 	$(COMPILER) $(CFLAGS) $(SRCS) $(LIBS) -o $(BIN)
 
 clean:
