@@ -44,15 +44,9 @@ CFLAGS += -W -Wall -Wextra -O2 -std=gnu11
 
 all: $(BIN)
 
-$(BIN): $(SRCS) $(HDRS) $(HIDAPI)
+$(BIN): $(SRCS) $(HDRS)
 	$(COMPILER) $(CFLAGS) $(SRCS) $(LIBS) -o $(BIN)
 
-hidapi/mac/.libs/libhidapi.a:
-	git clone git://github.com/signal11/hidapi.git
-	cd hidapi && ./bootstrap
-	cd hidapi && ./configure
-	$(MAKE) -Chidapi
-
 clean:
-	rm -rvf $(BIN) hidapi
+	rm -rvf $(BIN)
 
