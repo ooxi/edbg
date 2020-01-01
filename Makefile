@@ -28,11 +28,11 @@ else
   ifeq ($(UNAME), Darwin)
     BIN = edbg
     SRCS += dbg_mac.c
-    LIBS += hidapi/mac/.libs/libhidapi.a
+    LIBS += /usr/local/lib/libhidapi.a
     LIBS += -framework IOKit
     LIBS += -framework CoreFoundation
-    HIDAPI = hidapi/mac/.libs/libhidapi.a
-    CFLAGS += -Ihidapi/hidapi
+    HIDAPI = /usr/local/lib/libhidapi.a
+    CFLAGS += -I/usr/local/include/hidapi
   else
     BIN = edbg.exe
     SRCS += dbg_win.c
