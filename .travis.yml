@@ -43,9 +43,9 @@ before_install:
   # ====
   #
   # Installing the libhidapi via brew
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      sudo apt-get -y update;
-      sudo apt-get -y install libudev-dev;
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew update;
+      brew install hidapi;
     fi
 
 
