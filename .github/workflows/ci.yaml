@@ -23,9 +23,9 @@ jobs:
     - name: Linux amd64 Clang
       run: docker run --volume $GITHUB_WORKSPACE:/github/workspace --workdir /github/workspace fedora:33 /github/workspace/.github/workflows/linux-amd64-clang.sh
     
-    # Native (Linux amd64 GCC)
-    - name: Linux amd64 GCC
-      run: docker run --volume $GITHUB_WORKSPACE:/github/workspace --workdir /github/workspace fedora:33 /github/workspace/.github/workflows/linux-amd64-gcc.sh
+#    # Native (Linux amd64 GCC)
+#    - name: Linux amd64 GCC
+#      run: docker run --volume $GITHUB_WORKSPACE:/github/workspace --workdir /github/workspace fedora:33 /github/workspace/.github/workflows/linux-amd64-gcc.sh
 
     # Test
     - name: test

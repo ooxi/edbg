@@ -15,7 +15,7 @@ sudo dnf -y install	\
 	libudev-devel
 
 # Build environment
-export CC=gcc
+export COMPILER=gcc
 
 # Build edbg
 make clean
