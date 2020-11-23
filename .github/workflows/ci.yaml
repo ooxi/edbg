@@ -37,7 +37,7 @@ jobs:
 
     # Test
     - name: test
-      run: ls -la
+      run: ls -la target
 
 #      run: |
 #        sudo apt-get -y update
