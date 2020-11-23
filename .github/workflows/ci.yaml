@@ -33,7 +33,7 @@ jobs:
 
     # Cross compilation (Windows amd64 mingw)
     - name: Windows i686 mingw
-      run: docker run --volume $GITHUB_WORKSPACE:/github/workspace --workdir /github/workspace fedora:33 /github/workspace/.github/workflows/windows-i686-mingw.sh
+      run: docker run --volume $GITHUB_WORKSPACE:/source:ro --volume $GITHUB_WORKSPACE/target:/target fedora:33 /github/workspace/.github/workflows/windows-i686-mingw.sh
 
     # Test
     - name: test
