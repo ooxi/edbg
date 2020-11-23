@@ -8,6 +8,8 @@
 #  - /target: read-write directory where the built binary should be
 #             placed
 
+cp -r '/source' '/working-directory'
+
 dnf install -y glibc-locale-source
 localedef  --force --inputfile=en_US --charmap=UTF-8 en_US.UTF-8
 
