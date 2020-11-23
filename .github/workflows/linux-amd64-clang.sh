@@ -15,5 +15,4 @@ sudo dnf -y install	\
 	libudev-devel
 
 # Build edbg
-make
-ls -la
+make clean && make
