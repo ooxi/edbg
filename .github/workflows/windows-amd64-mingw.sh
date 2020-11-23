@@ -12,7 +12,7 @@ localedef  --force --inputfile=en_US --charmap=UTF-8 en_US.UTF-8
 sudo dnf -y install	\
 	git		\
 	make		\
-	mingw32-gcc
+	mingw64-gcc
 
 # Driver Development Kit
 git clone --branch=v2.5 --depth=1 https://github.com/uic-evl/omicron.git omicron;
@@ -22,6 +22,5 @@ export COMPILER='x86_64-w64-mingw32-gcc -Iomicron/external/include/ddk';
 export UNAME=Windows;
 
 # Build edbg
-find /usr
 make clean
 make
