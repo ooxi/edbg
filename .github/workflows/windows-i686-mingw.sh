@@ -27,5 +27,5 @@ export COMPILER='i686-w64-mingw32-gcc -Iomicron/external/include/ddk';
 export UNAME=Windows;
 
 # Build edbg
-make clean
-make
+make -C 'working-directory' clean
+make -C 'working-directory' 
