@@ -25,6 +25,7 @@ jobs:
         sudo apt-get -y update
         sudo apt-get -y install clang make libudev-dev
     - uses: docker://fedora:33
+      args: echo 'hello world'
 
 #    # Prepare build environment
 #    - name: Prepare build environment
