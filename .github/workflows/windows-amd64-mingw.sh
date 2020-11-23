@@ -20,12 +20,15 @@ sudo dnf -y install	\
 	mingw64-gcc
 
 # Driver Development Kit
-git clone --branch=v2.5 --depth=1 https://github.com/uic-evl/omicron.git omicron;
+git clone --branch=v2.5 --depth=1 https://github.com/uic-evl/omicron.git '/working-directory/omicron'
 
 # Build environment
 export COMPILER='x86_64-w64-mingw32-gcc -Iomicron/external/include/ddk';
 export UNAME=Windows;
 
 # Build edbg
-make clean
-make
+make -C '/working-directory' clean
+make -C '/working-directory'
+
+# Export build artifact
+cp '/working-directory/edbg.exe' '/target/edbg-windows-amd64-mingw.exe'
