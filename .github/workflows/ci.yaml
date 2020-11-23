@@ -29,7 +29,7 @@ jobs:
 
     # Cross compilation (Windows amd64 mingw)
     - name: Windows amd64 mingw
-      run: docker run --volume $GITHUB_WORKSPACE:/github/workspace --workdir /github/workspace fedora:33 /github/workspace/.github/workflows/linux-amd64-gcc.sh
+      run: docker run --volume $GITHUB_WORKSPACE:/github/workspace --workdir /github/workspace fedora:33 /github/workspace/.github/workflows/windows-amd64-mingw.sh
 
     # Test
     - name: test
