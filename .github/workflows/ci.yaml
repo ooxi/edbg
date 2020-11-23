@@ -19,13 +19,14 @@ jobs:
       with:
         submodules: true
 
-    # Linux amd64 build
+    # Native
     - name: Linux amd64 Clang
-      run: |
-        sudo apt-get -y update
-        sudo apt-get -y install clang make libudev-dev
-    - uses: docker://fedora:33
-      args: bash -c 'echo helloworld'
+      name: docker run fedora:33 dnf install make
+#      run: |
+#        sudo apt-get -y update
+#        sudo apt-get -y install clang make libudev-dev
+#    - uses: docker://fedora:33
+#      args: bash -c 'echo helloworld'
 
 #    # Prepare build environment
 #    - name: Prepare build environment
