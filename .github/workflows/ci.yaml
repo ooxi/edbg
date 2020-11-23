@@ -21,7 +21,7 @@ jobs:
 
     # Native
     - name: Linux amd64 Clang
-      run: docker run fedora:33 /github/workspace/.github/workflows/linux-amd64-clang.sh
+      run: docker run --volume $GITHUB_WORKSPACE:/github/workspace fedora:33 /github/workspace/.github/workflows/linux-amd64-clang.sh
 
 #      run: |
 #        sudo apt-get -y update
