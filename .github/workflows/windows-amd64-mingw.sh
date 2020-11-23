@@ -3,7 +3,10 @@
 # Assumes to be executed with root permissions inside a Fedora
 # container.
 #
-# Expects the repository to be available at $PWD
+# Expects the following directories to be provided from the host
+#  - /source: read-only repository
+#  - /target: read-write directory where the built binary should be
+#             placed
 
 dnf install -y glibc-locale-source
 localedef  --force --inputfile=en_US --charmap=UTF-8 en_US.UTF-8
