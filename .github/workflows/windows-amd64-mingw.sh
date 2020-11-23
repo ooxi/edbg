@@ -14,8 +14,12 @@ sudo dnf -y install	\
 	make		\
 	mingw32-gcc
 
+# Driver Development Kit
+git clone --branch=v2.5 --depth=1 https://github.com/uic-evl/omicron.git omicron;
+
 # Build environment
-export COMPILER=gcc
+export COMPILER='x86_64-w64-mingw32-gcc -Iomicron/external/include/ddk';
+export UNAME=Windows;
 
 # Build edbg
 make clean
