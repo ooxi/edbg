@@ -14,5 +14,9 @@ sudo dnf -y install	\
 	make		\
 	libudev-devel
 
+# Build environment
+export CC=clang
+
 # Build edbg
-make clean && make
+make clean
+make
