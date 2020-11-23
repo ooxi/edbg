@@ -19,6 +19,10 @@ jobs:
       with:
         submodules: true
 
+    # Linux amd64 build
+    - name: Linux amd64 Clang
+      run:
+
 #    # Prepare build environment
 #    - name: Prepare build environment
 #      run: npx --package mini-cross mc --no-tty _ make clean
