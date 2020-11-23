@@ -21,7 +21,8 @@ jobs:
 
     # Linux amd64 build
     - name: Linux amd64 Clang
-      run:
+      run: ls /
+    - uses: docker://ubuntu:20.04
 
 #    # Prepare build environment
 #    - name: Prepare build environment
