@@ -21,7 +21,7 @@ jobs:
 
     # Native
     - name: Linux amd64 Clang
-      name: docker run fedora:33 dnf install make
+      run: docker run fedora:33 dnf install make
 #      run: |
 #        sudo apt-get -y update
 #        sudo apt-get -y install clang make libudev-dev
