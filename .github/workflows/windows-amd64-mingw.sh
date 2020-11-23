@@ -10,9 +10,9 @@ localedef  --force --inputfile=en_US --charmap=UTF-8 en_US.UTF-8
 
 # Install build dependencies
 sudo dnf -y install	\
-	gcc		\
+	git		\
 	make		\
-	libudev-devel
+	mingw32-gcc
 
 # Build environment
 export COMPILER=gcc
