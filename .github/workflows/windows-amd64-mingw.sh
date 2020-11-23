@@ -22,5 +22,6 @@ export COMPILER='x86_64-w64-mingw32-gcc -Iomicron/external/include/ddk';
 export UNAME=Windows;
 
 # Build edbg
+find /usr
 make clean
 make
