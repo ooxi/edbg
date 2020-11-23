@@ -23,5 +23,8 @@ sudo dnf -y install	\
 export COMPILER=clang
 
 # Build edbg
-make clean
-make
+make -C '/working-directory' clean
+make -C '/working-directory'
+
+# Export build artifact
+cp '/working-directory/edbg.exe' '/target/edbg-linux-amd64-clang.exe'
